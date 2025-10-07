@@ -13,6 +13,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
 
+
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
@@ -29,29 +30,44 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <style>
-@media (max-width: 991px) {
-    .wrd-home-slider-area {
-        padding-top: 40px;
-        text-align: center;
-    }
-    #contactForm {
-        width: 90% !important;
-        height: auto !important;
-        padding: 20px !important;
-    }
-    .wrd-slide-title h2 {
-        font-size: 28px;
-        margin-top: 15px;
-    }
-    .wrd-slider-content-text p {
-        font-size: 16px;
-    }
-    .wrd-button {
-        margin-top: 10px;
-        display: inline-block;
-    }
-}
-</style>
+        .hero-contact-form {
+            width: 400px;
+            background-color: #123417;
+            border-radius: 15px;
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            display: flex;
+            padding: 20px;
+            flex-direction: column;
+            justify-content: space-between;
+           
+        }
+
+        @media (max-width: 991px) {
+            .hero-contact-form {
+                position: relative !important;
+                top: 0 !important;
+                right: 0 !important;
+                transform: none !important;
+                width: 90% !important;
+                height: auto !important;
+                margin: 0 auto 20px auto;
+            }
+
+            .wrd-home-slider-area {
+                padding-top: 30px;
+                text-align: center;
+            }
+
+            .wrd-slide-title h2 {
+                font-size: 28px;
+            }
+
+            .wrd-slider-content-text p {
+                font-size: 16px;
+            }
+        }
+    </style>
 
 </head>
 
@@ -126,13 +142,14 @@
         <div class="site-content">
             <!-- Content Area-->
             <div class="content-area">
+                
                 <!-- Slider Section -->
                 <section class="wrd-home-slider-area" style="position: relative;">
                     <div class="wrd-home-slider-wrapper">
                         <div class="wrd-single-slide-item wrd-cover-bg"
                             data-background="assets/images/slider/h1-slide-1.jpg">
                             <div class="container">
-                                <div class="row d-flex align-items-center flex-column-reverse flex-lg-row">
+                                <div class="row align-items-center ">
 
                                     <!-- Text Section -->
                                     <div
@@ -159,18 +176,7 @@
                                     <!-- Contact Form -->
                                     <div
                                         class="col-xl-6 col-lg-6 col-md-10 col-sm-12 d-flex justify-content-center mb-4 mb-lg-0">
-                                        <div id="contactForm" style="
-                            width: 400px;
-                            height: 550px;
-                            background-color: #123417;
-                            border-radius: 15px;
-                            color: #fff;
-                            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-                            display: flex;
-                            padding: 20px;
-                            flex-direction: column;
-                            justify-content: space-between;">
-
+                                        <div id="contactForm" class="hero-contact-form">
                                             <form action="send.php" method="POST"
                                                 style="display: flex; flex-direction: column; gap: 10px;">
                                                 <input type="hidden" name="form_type" value="hero_contact">
@@ -216,7 +222,6 @@
                         </div>
                     </div>
                 </section>
-
                 <!-- About Us Section-->
                 <section class="about-us-section wow fadeInUp pt-5 mt-5" data-wow-duration="1.25s">
                     <div class="container">
